@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20260101)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.99")
+	(generator_version "10.0")
 	(uuid "05da8336-9f5c-4099-b9ff-641fddfc3258")
 	(paper "A4")
 	(lib_symbols
@@ -2635,7 +2635,29 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "CONN HDR 50POS R/A SMD GOLD"
+			(at 144.78 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samtec Inc."
+			(at 144.78 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "ERM8-025-01-L-D-RA-K-TR"
 			(at 144.78 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -2861,7 +2883,29 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "RES SMD 2.2K OHM 0.1% 1/16W 0402"
+			(at 111.76 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 111.76 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "ERA-2AEB222X"
 			(at 111.76 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -2942,7 +2986,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "LED RED CLEAR SMD"
 			(at 111.76 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -2955,6 +2999,28 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lite-On Inc."
+			(at 111.76 123.19 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LTST-C171KRKT"
+			(at 111.76 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

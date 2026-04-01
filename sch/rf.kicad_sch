@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20260101)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.99")
+	(generator_version "10.0")
 	(uuid "a8690145-6f4f-4960-8d9a-33187501de9e")
 	(paper "A4")
 	(lib_symbols
@@ -5351,7 +5351,29 @@
 				)
 			)
 		)
-		(property "Description" "20 MHz to 4.0 GHz GaAs SPDT Switch, SC-70"
+		(property "Description" "IC RF SWITCH SPDT 3GHZ SC70-6"
+			(at 223.52 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Skyworks Solutions Inc."
+			(at 223.52 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "AS179-92LF"
 			(at 223.52 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -5381,7 +5403,7 @@
 			(uuid "20dc4ee2-c2b3-4fdc-bcd2-2747f0050468")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "U5")
 					(unit 1)
@@ -5444,7 +5466,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
+			(at 132.08 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 132.08 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
 			(at 132.08 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -5526,7 +5570,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
+			(at 137.16 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 137.16 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
 			(at 137.16 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -5544,7 +5610,7 @@
 			(uuid "4042c917-aa3b-483a-9c18-4c94c8713cdc")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "C25")
 					(unit 1)
@@ -5683,8 +5749,30 @@
 				)
 			)
 		)
-		(property "Description" "Inductor"
+		(property "Description" "FIXED IND 47NH 210MA 1.08 OHM"
 			(at 107.95 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 107.95 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LQW15AN47NJ00D"
+			(at 107.95 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6077,7 +6165,29 @@
 				)
 			)
 		)
-		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+		(property "Description" "CONN U.FL RCPT STR 50 OHM SMD"
+			(at 276.86 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hirose Electric Co Ltd"
+			(at 276.86 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "U.FL-R-SMT-1(10)"
 			(at 276.86 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -6095,11 +6205,7 @@
 			(uuid "b22d6882-1af5-410a-96eb-15194c48b128")
 		)
 		(instances
-			(project ""
-				(path "/a878b048-3f07-4600-919c-96160dad94ef"
-					(reference "J2")
-					(unit 1)
-				)
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "J2")
 					(unit 1)
@@ -6239,7 +6345,29 @@
 				)
 			)
 		)
-		(property "Description" "Three pin crystal, GND on pin 2"
+		(property "Description" "XTAL OSC TCXO 10MHZ CMOS SMD"
+			(at 63.5 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ECS Inc."
+			(at 63.5 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "ECS-TXO-2520MV-100-AN-TR"
 			(at 63.5 25.4 0)
 			(hide yes)
 			(show_name no)
@@ -6263,7 +6391,7 @@
 			(uuid "54ab1b43-10b3-490a-83f6-24c9e213831f")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "Y1")
 					(unit 1)
@@ -6562,7 +6690,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 215.9 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 215.9 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 215.9 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -6798,8 +6948,30 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
 			(at 194.31 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 194.31 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
+			(at 194.31 63.5 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7036,7 +7208,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 40.64 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 40.64 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 40.64 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -7118,7 +7312,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 30.48 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 30.48 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 30.48 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -7198,7 +7414,29 @@
 				)
 			)
 		)
-		(property "Description" "868MHz/915MHz Sub-GHz Impedance Matched Filter integrated passive for Semtech SX1261, SX1262, LLCC68"
+		(property "Description" "CER FILTER 895MHZ BAND PASS"
+			(at 165.1 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Johanson Technology Inc."
+			(at 165.1 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "0900FM15K0039001E"
 			(at 165.1 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -7304,7 +7542,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 27.94 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 27.94 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 27.94 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7383,8 +7643,30 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
 			(at 199.39 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 199.39 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
+			(at 199.39 58.42 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7465,7 +7747,29 @@
 				)
 			)
 		)
-		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+		(property "Description" "CONN U.FL RCPT STR 50 OHM SMD"
+			(at 170.18 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Hirose Electric Co Ltd"
+			(at 170.18 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "U.FL-R-SMT-1(10)"
 			(at 170.18 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -7483,7 +7787,7 @@
 			(uuid "36d1f731-d47b-4e93-9184-a3bb6576f2d5")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "J3")
 					(unit 1)
@@ -7547,7 +7851,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 53.34 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 53.34 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 53.34 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -7782,8 +8108,30 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
 			(at 120.65 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 120.65 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
+			(at 120.65 129.54 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8095,8 +8443,30 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 47PF 50V C0G/NP0 0402"
 			(at 255.27 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 255.27 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "GRM1555C1H470JA01D"
+			(at 255.27 60.96 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8176,7 +8546,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 121.92 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 121.92 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 121.92 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8255,8 +8647,30 @@
 				)
 			)
 		)
-		(property "Description" "Ferrite bead"
+		(property "Description" "FERRITE BEAD 30 OHM 0805 1LN"
 			(at 148.59 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 148.59 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "BLM21PG300SN1D"
+			(at 148.59 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8273,7 +8687,7 @@
 			(uuid "508f6077-b87f-4174-a4ab-9f6083bdae06")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "FB1")
 					(unit 1)
@@ -8337,7 +8751,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 38.1 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 38.1 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 38.1 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -8416,8 +8852,30 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "RES 10 OHM 1% 1/16W 0402"
 			(at 113.03 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Vishay Dale"
+			(at 113.03 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "CRCW040210R0FKED"
+			(at 113.03 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8434,7 +8892,7 @@
 			(uuid "7ad780cc-5abd-444a-8e6f-d3036b6e232f")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "R1")
 					(unit 1)
@@ -8495,8 +8953,30 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0402 10NF 25V X7R 10%"
 			(at 85.09 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 85.09 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C103K3REC7411"
+			(at 85.09 25.4 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8513,7 +8993,7 @@
 			(uuid "55a3c371-56f7-4e19-9cdb-b4e6a1b2fc19")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "C13")
 					(unit 1)
@@ -8654,7 +9134,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.47UF 25V X5R 0402"
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 114.3 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C1005X5R1E474K050BB"
 			(at 114.3 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -8736,7 +9238,29 @@
 				(justify left)
 			)
 		)
-		(property "Description" "Single Schmitt NOT Gate, Low-Voltage CMOS, SOT-23"
+		(property "Description" "IC INVERTER 1CH 1-INP SOT23-5"
+			(at 233.68 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 233.68 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "SN74LVC1G14DBVT"
 			(at 233.68 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -8763,7 +9287,7 @@
 			(uuid "075b32af-8ab4-42f0-89a1-98b391344018")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "U7")
 					(unit 1)
@@ -8824,8 +9348,30 @@
 				)
 			)
 		)
-		(property "Description" "GNSS Module NEO M8, VCC 2.7V to 3.6V"
+		(property "Description" "RF RCVR GNSS/GPS 1.575GHZ 24LCC"
 			(at 81.28 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "u-blox"
+			(at 78.74 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "NEO-M8M-0"
+			(at 78.74 142.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9047,7 +9593,29 @@
 				)
 			)
 		)
-		(property "Description" "150 MHz to 960 MHz Low Power Long Range Transceiver, 22dBm output power, spreading factor from 5 to 12, LoRA, QFN-24"
+		(property "Description" "IC RF TXRX ISM<1GHZ 24QFN"
+			(at 76.2 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Semtech Corporation"
+			(at 76.2 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "SX1262IMLTRT"
 			(at 76.2 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -9212,7 +9780,7 @@
 			(uuid "64b91f81-1ab3-40bc-88ea-7e96ef99b01b")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef/bc9ddf0c-e477-457a-9bbb-9b121eba5509"
 					(reference "#PWR024")
 					(unit 1)
@@ -9351,8 +9919,30 @@
 				)
 			)
 		)
-		(property "Description" "Inductor"
+		(property "Description" "FIXED IND 47NH 210MA 1.08 OHM"
 			(at 140.97 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 140.97 55.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LQW15AN47NJ00D"
+			(at 140.97 55.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20260101)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.99")
+	(generator_version "10.0")
 	(uuid "a878b048-3f07-4600-919c-96160dad94ef")
 	(paper "A4")
 	(lib_symbols
@@ -3101,7 +3101,29 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "IC REG LINEAR 3.3V 2A 10LFCSP"
+			(at 106.68 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc."
+			(at 106.68 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "ADP7158ACPZ-3.3-R7"
 			(at 106.68 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -3146,7 +3168,7 @@
 			(uuid "642f1999-4acd-45a3-8305-9265fc8d4faf")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(reference "U3")
 					(unit 1)
@@ -3210,7 +3232,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 10UF 10V X5R 0603"
+			(at 68.58 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 68.58 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LMK107BBJ106MALT"
 			(at 68.58 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -3384,7 +3428,7 @@
 			(uuid "5d57f15d-20ab-4870-91f6-b9836fa2d504")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(reference "#PWR02")
 					(unit 1)
@@ -3448,7 +3492,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 1UF 16V X7R 0603"
+			(at 88.9 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 88.9 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0603C105K4RACTU"
 			(at 88.9 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -3530,7 +3596,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 175.26 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 175.26 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 175.26 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -3562,7 +3650,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3640,7 +3728,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3768,7 +3856,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 1UF 16V X7R 0603"
+			(at 78.74 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 78.74 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0603C105K4RACTU"
 			(at 78.74 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -3927,7 +4037,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "LED GREEN CLEAR SMD"
 			(at 157.48 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -3940,6 +4050,28 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 157.48 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Lite-On Inc."
+			(at 157.48 158.75 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LTST-C171KGKT"
+			(at 157.48 158.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4019,7 +4151,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 10UF 10V X5R 0603"
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 142.24 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "LMK107BBJ106MALT"
 			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -4207,7 +4361,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4349,7 +4503,7 @@
 			(uuid "76d23939-ec0c-47fc-b534-33891b35a886")
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(reference "#PWR011")
 					(unit 1)
@@ -4363,7 +4517,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4491,7 +4645,29 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
+		(property "Description" "RES SMD 2.2K OHM 0.1% 1/16W 0402"
+			(at 157.48 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 157.48 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "ERA-2AEB222X"
 			(at 157.48 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -4650,7 +4826,7 @@
 				)
 			)
 		)
-		(property "Description" "High-Speed CAN Transceiver, 1Mbps, 3.3V supply, low power standby mode, shutdown mode, SOT-23-8/SOIC-8"
+		(property "Description" "IC TRANSCEIVER 1/1 8SOIC"
 			(at 107.95 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -4926,7 +5102,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 0.1UF 16V X7R 0402"
+			(at 127 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 127 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0402C104K4RACTU"
 			(at 127 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4958,7 +5156,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5241,7 +5439,29 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "CAP CER 1UF 16V X7R 0603"
+			(at 132.08 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "KEMET"
+			(at 132.08 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "C0603C105K4RACTU"
 			(at 132.08 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -5399,8 +5619,30 @@
 				)
 			)
 		)
-		(property "Description" "Memory Module Temperature Sensor w/ EEPROM"
+		(property "Description" "IC TEMP SENSOR 2WIRE 3V 8-DFN"
 			(at 187.96 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Microchip Technology"
+			(at 190.5 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Product Number" "MCP98243T-BE/MC"
+			(at 190.5 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5585,7 +5827,7 @@
 			)
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(page "2")
 				)
@@ -5661,7 +5903,7 @@
 			)
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(page "4")
 				)
@@ -5777,7 +6019,7 @@
 			)
 		)
 		(instances
-			(project ""
+			(project "CUTIE-ZEST"
 				(path "/a878b048-3f07-4600-919c-96160dad94ef"
 					(page "3")
 				)
