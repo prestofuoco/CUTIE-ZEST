@@ -5589,7 +5589,7 @@
 				)
 			)
 		)
-		(property "Value" "STM32G474CEUx"
+		(property "Value" "STM32G473CEU6"
 			(at 134.62 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5644,7 +5644,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Product Number" "STM32G474CEU6"
+		(property "Manufacturer Product Number" "STM32G473CEU6"
 			(at 134.62 91.44 0)
 			(hide yes)
 			(show_name no)
