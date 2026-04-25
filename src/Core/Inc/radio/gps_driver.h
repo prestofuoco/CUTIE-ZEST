@@ -13,9 +13,9 @@ typedef struct {
     bool has_fix;
 } GPS_Data_t;
 
-// prototypes
-void GPS_Init(UART_HandleTypeDef *huart);
-void GPS_Process(void); 
-GPS_Data_t GPS_GetLatestData(void);
+// functions
+void GPS_Init(UART_HandleTypeDef *huart); // init gps
+void GPS_Process(void); // minmea parsing
+GPS_Data_t GPS_GetLatestData(void); // return data
 
 #endif
