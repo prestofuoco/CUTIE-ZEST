@@ -115,6 +115,7 @@ int main(void)
   while (1)
   {
     GPS_Process();
+    GPS_LED_Tick();
 
     /* USER CODE BEGIN 3 */
   }

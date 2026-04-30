@@ -3,8 +3,6 @@
 #include <stdint.h>
 #include <string.h>
 
-#define GPS_BUFFER_SIZE 128
-
 static UART_HandleTypeDef *gps_uart;
 static GPS_Data_t current_data; // most recent gps data
 
@@ -90,6 +88,17 @@ void GPS_Process(void) {
         case MINMEA_UNKNOWN:
         default:
             break;
+    }
+}
+
+void GPS_LED_Tick(void) {
+    static uint32_t last_toggle = 0;
+
+    uint32_t interval = current_data.has_fix ? 1000 : 200;
+
+    if ((HAL_GetTick() - last_toggle) >= interval) {
+        HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+        last_toggle = HAL_GetTick();
     }
 }
 

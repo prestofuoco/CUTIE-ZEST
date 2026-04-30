@@ -3,6 +3,7 @@
 
 #include "stm32g4xx_hal.h"
 #include "minmea.h"
+#include "main.h"
 
 typedef struct {
     float latitude;
@@ -17,5 +18,6 @@ typedef struct {
 void GPS_Init(UART_HandleTypeDef *huart); // init gps
 void GPS_Process(void); // minmea parsing
 GPS_Data_t GPS_GetLatestData(void); // return data
+void GPS_LED_Tick(void); // lights LED
 
 #endif
