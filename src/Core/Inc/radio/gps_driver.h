@@ -9,7 +9,8 @@ typedef struct {
     float longitude;
     float altitude;
     float speed_kph;
-    int satellites;
+    uint8_t satellites;
+    uint32_t utc_time;
     bool has_fix;
 } GPS_Data_t;
 

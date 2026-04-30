@@ -5,7 +5,7 @@
 
 #define RF_FREQUENCY 915000000
 
-// prototypes
+// functions
 void LORA_Init(void);
 void LORA_SendPacket(uint8_t *payload, uint8_t size);
 void LORA_Process(void);

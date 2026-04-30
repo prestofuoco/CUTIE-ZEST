@@ -107,7 +107,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   GPS_Init(&huart1);
-  LORA_Init(&hspi1);
+  //LORA_Init(&hspi1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
