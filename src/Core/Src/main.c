@@ -114,8 +114,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    GPS_Process();
-    GPS_LED_Tick();
+    // GPS_GetLatestData();
+    
 
     /* USER CODE BEGIN 3 */
   }
