@@ -2,90 +2,90 @@
 #include "minmea.h"
 #include <stdint.h>
 #include <string.h>
+#include <stdbool.h>
 
 static UART_HandleTypeDef *gps_uart;
 static GPS_Data_t current_data; // most recent gps data
 
-static uint8_t  raw_rx_buffer[256];         // raw bytes from UART interrupt
-static uint16_t rx_index = 0;
-
-static char     nmea_line[128];             // one complete NMEA sentence
-static bool     line_ready = false;         // flag: sentence ready to parse
+static uint8_t rx_byte;
+static char rx_line_buffer[GPS_BUFFER_SIZE];
+static char processing_buffer[GPS_BUFFER_SIZE];
+static volatile uint8_t rx_idx = 0;
+static volatile bool line_ready = false;
 
 void GPS_Init(UART_HandleTypeDef *huart) {
     gps_uart = huart;
 
     // clear memory
     memset(&current_data, 0, sizeof(GPS_Data_t));
-    memset(raw_rx_buffer, 0, sizeof(raw_rx_buffer));
-    rx_index   = 0;
+    memset(rx_line_buffer, 0, GPS_BUFFER_SIZE);    
+    rx_idx   = 0;
     line_ready = false;
 
     // init rx
-    HAL_UART_Receive_IT(gps_uart, &raw_rx_buffer[rx_index], 1);
+    HAL_UART_Receive_IT(gps_uart, &rx_byte, 1);
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
-    if (huart != gps_uart) return;   // ignore other UARTs
-    uint8_t byte = raw_rx_buffer[rx_index];
+    if (huart->Instance == gps_uart->Instance) {
+        // end of nmea sentence
+        if (rx_byte == '\n' || rx_byte == '\r') {
+            if (rx_idx > 0) {
+                rx_line_buffer[rx_idx] = '\0'; // terminate
+                // copy so the interrupt can stay active
+                memcpy(processing_buffer, rx_line_buffer, rx_idx + 1);
+                line_ready = true;
+                rx_idx = 0;
+            }
+        } 
+        else {
+            if (rx_idx < (GPS_BUFFER_SIZE - 1)) {
+                rx_line_buffer[rx_idx++] = (char)rx_byte;
+            }
+        }
 
-    if (byte == '\n') {
-        // end of NMEA sentence — copy it and set the flag
-        memcpy(nmea_line, raw_rx_buffer, rx_index + 1);
-        nmea_line[rx_index] = '\0';
-        line_ready = true;
-        rx_index = 0;                // reset for next sentence
-    } else {
-        // keep accumulating, guard against overflow
-        rx_index++;
-        if (rx_index >= sizeof(raw_rx_buffer))
-            rx_index = 0;           // overflow protection, reset
+        HAL_UART_Receive_IT(gps_uart, &rx_byte, 1);
     }
-
-    // re-arm for the next byte — keeps the chain going
-    HAL_UART_Receive_IT(gps_uart, &raw_rx_buffer[rx_index], 1);
 }
 
 void GPS_Process(void) {
     if (!line_ready) return;    // nothing to do yet
     line_ready = false;         // clear flag before processing
 
-    switch (minmea_sentence_id(nmea_line, false)) {
-        // ── position, velocity, time ─────────────────────────
-        case MINMEA_SENTENCE_RMC:
-        {
+    enum minmea_sentence_id id = minmea_sentence_id(processing_buffer, false); 
+    switch (id) {
+        case MINMEA_SENTENCE_RMC: {
             struct minmea_sentence_rmc frame;
-            if (minmea_parse_rmc(&frame, nmea_line))
-            {
-                current_data.has_fix      = frame.valid;
-                current_data.latitude     = minmea_tocoord(&frame.latitude);
-                current_data.longitude    = minmea_tocoord(&frame.longitude);
-                current_data.speed_kph    = minmea_tofloat(&frame.speed) * 1.852f; // knots → kph
+            if (minmea_parse_rmc(&frame, processing_buffer)) {
+                current_data.has_fix          = frame.valid; 
+                if (frame.valid) {
+                    current_data.latitude     = minmea_tocoord(&frame.latitude);
+                    current_data.longitude    = minmea_tocoord(&frame.longitude);
+                    current_data.speed_kph    = minmea_tofloat(&frame.speed) * 1.852f; // knots -> kph
+                    struct timespec ts;
+                    if (minmea_gettime(&ts, &frame.date, &frame.time) == 0) {
+                        current_data.utc_time = (uint32_t)ts.tv_sec; }
+                }
             }
-        }
-        break;
+        } break;
 
-        // ── fix data (altitude + satellites) ─────────────────
-        case MINMEA_SENTENCE_GGA:
-        {
+        case MINMEA_SENTENCE_GGA: {
             struct minmea_sentence_gga frame;
-            if (minmea_parse_gga(&frame, nmea_line))
-            {
+            if (minmea_parse_gga(&frame, processing_buffer)) {
                 current_data.has_fix    = (frame.fix_quality > 0);
                 current_data.latitude   = minmea_tocoord(&frame.latitude);
                 current_data.longitude  = minmea_tocoord(&frame.longitude);
                 current_data.altitude   = minmea_tofloat(&frame.altitude);
-                current_data.satellites = frame.satellites_tracked;
+                current_data.satellites = (uint8_t)frame.satellites_tracked;
             }
-        }
-        break;
-
+        } break;
+        
         // ── sentences we don't need — silently ignore ─────────
-        case MINMEA_SENTENCE_GSV:
-        case MINMEA_SENTENCE_GSA:
-        case MINMEA_SENTENCE_GLL:
-        case MINMEA_INVALID:
-        case MINMEA_UNKNOWN:
+        // case MINMEA_SENTENCE_GSV:
+        // case MINMEA_SENTENCE_GSA:
+        // case MINMEA_SENTENCE_GLL:
+        // case MINMEA_INVALID:
+        //case MINMEA_UNKNOWN:
         default:
             break;
     }
@@ -102,6 +102,6 @@ void GPS_LED_Tick(void) {
     }
 }
 
-GPS_Data_t GPS_GetLatest(void) {
+GPS_Data_t GPS_GetLatestData(void) {
     return current_data;
 }
