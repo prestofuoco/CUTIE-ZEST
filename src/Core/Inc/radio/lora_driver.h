@@ -3,13 +3,11 @@
 
 #include "stm32g4xx_hal.h"
 #include "sx126x.h"
+#include "main.h"
 #include <stdint.h>
 #include <stdbool.h>
 
 #define RF_FREQUENCY 915000000
-
-#define LORA_NSS_PORT   GPIOA
-#define LORA_NSS_PIN    GPIO_PIN_4
 
 typedef struct {
     uint16_t syncword;

@@ -14,14 +14,25 @@ static bool          packet_available = false;
 // ── CS pin helpers ───────────────────────────────────────────────
 void sx126x_hal_set_nss(bool state) {
     HAL_GPIO_WritePin(
-        LORA_NSS_PORT,
-        LORA_NSS_PIN,
+        SPI1_CS0_GPIO_Port,
+        SPI1_CS0_Pin,
         state ? GPIO_PIN_SET : GPIO_PIN_RESET
     );
 }
 
+// ── busy wait ────────────────────────────────────────────────────
+static void sx126x_wait_for_busy(void) {
+    uint32_t start = HAL_GetTick();
+
+    while (HAL_GPIO_ReadPin(SX_BUSY_GPIO_Port, SX_BUSY_Pin) == GPIO_PIN_SET) {
+        if ((HAL_GetTick() - start) >= 500)
+            return;     // timeout safety — don't hang forever
+    }
+}
+
 // SPI read/write — sx126x library calls these internally
 void sx126x_hal_write(const void *context, const uint8_t *command, uint16_t command_len, const uint8_t *data, uint16_t data_len) {
+    sx126x_wait_for_busy();
     sx126x_hal_set_nss(false);
     HAL_SPI_Transmit(lora_spi, (uint8_t *)command, command_len, HAL_MAX_DELAY);
     if (data && data_len > 0)
@@ -30,6 +41,7 @@ void sx126x_hal_write(const void *context, const uint8_t *command, uint16_t comm
 }
 
 void sx126x_hal_read(const void *context, const uint8_t *command, uint16_t command_len, uint8_t *data, uint16_t data_len) {
+    sx126x_wait_for_busy();
     sx126x_hal_set_nss(false);
     HAL_SPI_Transmit(lora_spi, (uint8_t *)command, command_len, HAL_MAX_DELAY);
     HAL_SPI_Receive(lora_spi, data, data_len, HAL_MAX_DELAY);
@@ -68,10 +80,10 @@ void LORA_Init(SPI_HandleTypeDef *hspi) {
 
     // SF12, 125kHz bandwidth, coding rate 4/5, low data rate optimize on
     sx126x_lora_mod_params_t mod_params = {
-        .sf   = SX126X_LORA_SF12,
+        .sf   = SX126X_LORA_SF7,
         .bw   = SX126X_LORA_BW_125,
         .cr   = SX126X_LORA_CR_4_5,
-        .ldro = 1       // must be 1 for SF12 + 125kHz
+        .ldro = 0
     };
     sx126x_set_lora_mod_params(NULL, &mod_params);
 
@@ -126,12 +138,21 @@ void LORA_SendPacket(LORA_Packet_t *packet) {
 
     // wait for TX done IRQ (simple blocking wait — improve with interrupt later)
     sx126x_irq_mask_t irq;
+    uint32_t tx_start = HAL_GetTick();
+
     do {
         sx126x_get_irq_status(NULL, &irq);
+
+        if ((HAL_GetTick() - tx_start) >= 500)
+        {
+            sx126x_clear_irq_status(NULL, SX126X_IRQ_TX_DONE);
+            sx126x_set_rx(NULL, 0);
+            return;
+        }
+
     } while (!(irq & SX126X_IRQ_TX_DONE));
 
     sx126x_clear_irq_status(NULL, SX126X_IRQ_TX_DONE);
-
     // go back to RX after sending
     sx126x_set_rx(NULL, 0);
 }
