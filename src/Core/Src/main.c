@@ -107,16 +107,33 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   GPS_Init(&huart1);
-  //LORA_Init(&hspi1);
+  LORA_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    // GPS_GetLatestData();
-    
+  while (1) {
+    GPS_Process();
+    GPS_LED_Tick();
+    LORA_Process();
 
+    if (LORA_PacketAvailable()) {
+      LORA_Packet_t pkt = LORA_GetLatestPacket();
+    }
+
+    // send every 10 seconds
+    if (HAL_GetTick() - LORA_GetLastSendTick() >= 10000) {
+        GPS_Data_t gps = GPS_GetLatest();
+        LORA_Packet_t pkt = {
+            .latitude           = gps.latitude,
+            .longitude          = gps.longitude,
+            .altitude           = gps.altitude,
+            .satellites         = gps.satellites,
+            .has_fix            = gps.has_fix,
+            .battery_percentage = 85,
+        };
+        LORA_SendPacket(&pkt);
+    }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
